@@ -1,0 +1,78 @@
+#contact {
+  @include Display(100vh);
+  background: rgba($darkBlue, 0.05);
+  color: $light;
+  padding: 0 !important;
+  overflow: hidden !important;
+  #cnt {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    .left {
+      .box {
+        .content {
+          padding-top: 20px;
+          line-height: 0.5;
+        }
+        span {
+          background: $primary;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          line-height: 38px;
+          text-align: center;
+          font-size: 1.5em;
+        }
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+      }
+      display: flex;
+      padding-left: 15%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      background: linear-gradient(
+          to left,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.9)
+        ),
+        url(../images/cnt.png);
+    }
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      form {
+        color: rgba($dark, 0.95);
+        border: 1px solid rgba($light, 0.05);
+        background: rgba($light, 0.95);
+        padding: 5% 10%;
+        border-radius: 10px;
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          background: rgba($dark, 0.05);
+          border: 1px solid rgba($light, 0.1);
+          color: $dark;
+        }
+
+        .form-control::placeholder {
+          color: rgba($dark, 0.25);
+        }
+
+        .btn {
+          padding: 8px 35px;
+          background: $primary;
+          color: $light;
+          border: 1px solid rgba($light, 0.1);
+        }
+      }
+    }
+  }
+}

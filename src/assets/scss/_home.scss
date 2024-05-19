@@ -1,0 +1,21 @@
+#home {
+  @include Display(80vh);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.9)),
+    url(../images/Hero.png);
+  background-position: bottom center;
+  background-size: cover;
+  h1 {
+    font-size: $heading;
+    color: $light;
+  }
+  h5 {
+    color: $light;
+  }
+  @include primaryBtn($light, $primary);
+}
+
+@media (max-width: 450px) {
+  #home {
+    height: 70vh;
+  }
+}

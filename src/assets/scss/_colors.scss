@@ -1,0 +1,39 @@
+// colors Scheme
+
+$primary: #f69400;
+$gray: #ebe9e9;
+$sec: #3f5d97;
+$light: #feffff;
+$dark: #000;
+$darkBlue: #2f4672;
+$heading: 4.5vw;
+
+.text-Primary {
+  color: $primary;
+  font-weight: 600;
+}
+.textDark {
+  color: $dark;
+  font-weight: 600;
+}
+@mixin Display($height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: $height;
+}
+@mixin primaryBtn($color, $bg) {
+  #btn {
+    padding: 12px 35px;
+    color: $color;
+    background: linear-gradient(to left, $bg, rgba($bg, 0.85), $bg);
+    background-size: 150%;
+    background-position: left;
+    transition: 0.5s ease-in-out;
+    border-radius: 50px;
+    &:hover {
+      background-position: right;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#service {
+  background: rgba($sec, 0.05);
+  @include Display(100vh);
+  padding: 5% 0;
+  .serviceBox {
+    background: $light;
+
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+    .imgSec {
+      min-width: 250px;
+      height: 250px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        scale: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+    &:hover img {
+      scale: 1.02;
+      rotate: 1deg;
+    }
+    .content {
+      padding: 5% 10%;
+      a {
+        display: inline-block;
+        background: $primary;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 40px;
+        color: $light;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

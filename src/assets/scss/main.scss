@@ -1,0 +1,25 @@
+@import "_colors.scss", "_NavBar.scss", "_home.scss", "_about.scss",
+  "_service.scss", "_work.scss", "_contact.scss", "_footer.scss";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 990px) {
+  #about {
+    height: 100%;
+    padding: 5% 0;
+  }
+  #service {
+    height: 100%;
+    padding: 10% 0;
+  }
+  #cnt {
+    .left {
+      padding: 5%;
+    }
+  }
+  #contact {
+    height: 100%;
+  }
+}
